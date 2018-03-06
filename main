@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//0-ut
+//1-fal
+//2-eger
+//3-sajt
+
+int main()
+{
+    int *A,i=0;
+    char step;
+    A=Create("be.txt");
+
+    while(Solved(A)!=1)
+    {
+        printcsel(A);
+        printf("Step: ");
+        scanf(" %c",&step);
+        Move(A,step);
+        system("CLS");
+    }
+
+    printf("\nGratulalunk!\n Fasza eger vagy!\n");
+
+    destroy(A);
+
+    return 0;
+}
